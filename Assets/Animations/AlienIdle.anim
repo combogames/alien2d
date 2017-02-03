@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: AlienMainStop
+  m_Name: AlienIdle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -19,6 +19,10 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
+      value: {fileID: 21300030, guid: c4394e277a10e4d9b9979336e7a64541, type: 3}
+    - time: 3.75
+      value: {fileID: 21300028, guid: c4394e277a10e4d9b9979336e7a64541, type: 3}
+    - time: 4.9666667
       value: {fileID: 21300030, guid: c4394e277a10e4d9b9979336e7a64541, type: 3}
     attribute: m_Sprite
     path: 
@@ -39,12 +43,14 @@ AnimationClip:
       isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: 21300030, guid: c4394e277a10e4d9b9979336e7a64541, type: 3}
+    - {fileID: 21300028, guid: c4394e277a10e4d9b9979336e7a64541, type: 3}
+    - {fileID: 21300030, guid: c4394e277a10e4d9b9979336e7a64541, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.016666668
+    m_StopTime: 4.9833336
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

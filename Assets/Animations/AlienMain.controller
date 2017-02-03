@@ -44,13 +44,13 @@ AnimatorState:
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
---- !u!1102 &1102634982600519098
+--- !u!1102 &1102709353463630632
 AnimatorState:
   serializedVersion: 5
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: AlienMainStop
+  m_Name: AlienIdle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -62,7 +62,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: c2070b9d606ba4440a8db21c853b6930, type: 2}
+  m_Motion: {fileID: 7400000, guid: 1f3be2c0d6fe04f72994a6f5a87ef003, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -79,20 +79,20 @@ AnimatorStateMachine:
     m_State: {fileID: 1102528525445088866}
     m_Position: {x: 336, y: -12, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 1102634982600519098}
-    m_Position: {x: 108, y: 0, z: 0}
+    m_State: {fileID: 1102709353463630632}
+    m_Position: {x: 96, y: -24, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions:
-  - {fileID: 1109381018520507138}
+  - {fileID: 1109689967188730026}
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -96, y: 24, z: 0}
   m_EntryPosition: {x: 72, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 1102528525445088866}
---- !u!1109 &1109381018520507138
+  m_DefaultState: {fileID: 1102709353463630632}
+--- !u!1109 &1109689967188730026
 AnimatorTransition:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -100,7 +100,7 @@ AnimatorTransition:
   m_Name: 
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 1102634982600519098}
+  m_DstState: {fileID: 1102709353463630632}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
