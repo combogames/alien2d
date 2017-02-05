@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 258209489}
   - component: {fileID: 258209490}
   m_Layer: 0
-  m_Name: AlienMain
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -217,9 +217,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 258209484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.159304, y: -1.2, z: 0}
+  m_LocalPosition: {x: -6.48, y: -1.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 610929751}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -285,11 +286,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d612f0cc24b5464e80382e32225226f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 50
+  maxSpeed: 3
+  JumpPower: 150
+  grounded: 0
 --- !u!4 &582404319 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4558149486464470, guid: aedcbc5a4a8104e9da8e9ddf09a67c3c,
     type: 2}
   m_PrefabInternal: {fileID: 2087766208}
+--- !u!1 &610929750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 610929751}
+  - component: {fileID: 610929752}
+  - component: {fileID: 610929753}
+  m_Layer: 0
+  m_Name: PlayerGroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &610929751
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 610929750}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.03, y: -0.54, z: 0}
+  m_LocalScale: {x: 0.57, y: 0.24, z: 1}
+  m_Children: []
+  m_Father: {fileID: 258209486}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &610929752
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 610929750}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!114 &610929753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 610929750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9126d19213834608bcc8a0325be1ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &611642250 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4558149486464470, guid: aedcbc5a4a8104e9da8e9ddf09a67c3c,
