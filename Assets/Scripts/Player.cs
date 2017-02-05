@@ -6,11 +6,11 @@ public class Player : MonoBehaviour {
 
 	private float speed = 50f;
 	private float maxSpeed = 3;
-	private float JumpPower = 250f;
+	private float JumpPower = 300f;
 	public bool grounded = false; //<<Verificar PlayerCheck.cs para grounded
 
-	private Rigidbody2D rb2d;
-	private Animator anim;
+	private Rigidbody2D rb2d; //É um corpo no jogo afetado pela fisica relacionado ao player
+	private Animator anim; //<<Serve para controlar as animacoes do player
 
 	//Inicializando componentes e variaveis
 	//@override
@@ -22,14 +22,7 @@ public class Player : MonoBehaviour {
 	//Update is called once per frame
 	//@override
 	void Update () {
-
-		//'anim' seta a animacao apropriada do player para determinada acao.
-		//Estas animacoes e parametros estao configuradas dentro do Animator do player
-		anim.SetBool ("groundedParam", grounded); 
-
-		//Mathf.Abs retorna um valor absoluto e positivo, ficando um numero menor e mais maleavel.
-		anim.SetFloat ("speedParam", Mathf.Abs (Input.GetAxis ("Horizontal")));
-
+		updatePlayerAnimations ();
 	}
 
 	//FixedUpdate nao sofre interferencia do device ao atualizar
@@ -69,5 +62,15 @@ public class Player : MonoBehaviour {
 		}else if (horizAxis > 0.1f) {
 			transform.localScale = new Vector3 ( 1, 1, 1);
 		}	
+	}
+
+	//Atualiza as animacoes do player conforme ele se mexe.
+	private void updatePlayerAnimations(){
+		//Seta um valor ao parametro 'speedParam' se o player estiver se movento no eixo x
+		//e como 'speedParam' esta configurado no animator do player, ele vai iniciar a animacao de andar.
+		anim.SetFloat ("speedParam", Mathf.Abs (rb2d.velocity.x)); //<<Mathf.Abs retorna um valor absoluto e positivo
+
+		//Informando ao animator pelo parametro 'groundedParam' se o player esta no chao ou nao.
+		anim.SetBool ("groundedParam", grounded); 	
 	}
 }
